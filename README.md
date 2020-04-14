@@ -24,11 +24,23 @@ This database contains chest X-ray images for **COVID-19 positive cases** along 
 For the training processes we have used Keras over Tensorflow an Python. All the architectures have been created, trained and tested from scratch, which means that the weights of the network are initialized randomly and there is not previous information from other data that could help our models to improve their results. 
 
 **First Architecture - Baseline Architecture**
+
 We propose the following baseline CNN:
 
 ![Baseline Architecture.](https://github.com/polazaro/Covid-19-Detection/blob/master/images/baseline.bmp)
 
+This simple architecture consists of three Convolutional layers followed by a MaxPooling layer after each of them to reduce the dimensionality of the outputs. The convolutional layers have 32, 64 and 128 filters, respectively, all of them with size 3x3. After this blocks, the obtained features are flattened and two consecutive Fully-Connected layers are applied to reduce the dimensionality of the feature vector (the first one) and to perform de classification (the second one).
 
+**Second Architecture - Inception Based Architecture**
+
+The second architecture is based in a technique called **inception**. The main idea is to use different size kernels (1x1, 3x3, and 5x5) and different number of kernels (64, 32 and 16, respectively) in parallel to extract different features from the same image. Then, all these features are concatenated and its dimensionality is reduce by a MaxPooling layer. After that, another convolutional layer is applied, followed by its correspondant MaxPooling layer. At the end , we apply the same two Fully-Connected layers to reduce the dimensionality and perform the classification.
+
+![Inception Based Architecture.](https://github.com/polazaro/Covid-19-Detection/blob/master/images/final_arch.bmp)
+
+#### Experiments and Results
+First of all, some data augmentation has been done in order to balance the COVID-19 cases with the other two classes, because we are in an unbalance scenario. In the following table we can see the number of samples divided by its class:
+
+![Number of samples.](https://github.com/polazaro/Covid-19-Detection/blob/master/images/data_aug.bmp)
 
 
 
