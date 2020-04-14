@@ -57,7 +57,7 @@ We have performed some experiments without data augmentation and some with data 
 
 We obtain a surprisingly high test accuracy of **95,45%** without data augmentation. This means that the model is making 415 correct predictions over 435 samples. If we compare the performance of the baseline model for the three classes separately, we can see that the **Healthy and Pneumonia is much higher (98.50% and 95.04% respectively) than Covid-19 accuracy (78.78%)**, as we expected. Now, if we focus on the baseline model with data augmentation, the total test accuracy is improved in **0,23%** and the accuracy for the COVID-19 samples has increased until **84,84%**. The second architecture improves even more this result, with a COVID-19 test accuracy of **87,87%**, but decreases the accuracy for the Pneumonia cases in 1%.
 
-#### Conclusion
+## Conclusion
 With very simple architectures we are able to learn and distingish some features from penumonia, COVID-19 and healthy chest X-Ray images. This means that there are some patterns and differences between a normal Pneumonia and a COVID-19 Pneumonia. On the other hand, we have seen that data augmentation has helped us to improve Covid-19 accuracy. This tell us that there is not enough data and there is a need of collecting more data (real or not) in order to improve the results. 
 
 Another interesting approach would be to collect more information about patients, like their age, gender, pathologies, etc. This information could be included in the model using different techniques or a simple concatenation of features.
