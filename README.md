@@ -21,5 +21,15 @@ The database has been downloaded from a public [Kaggle](https://www.kaggle.com/t
 This database contains chest X-ray images for **COVID-19 positive cases** along with **Healthy** and **Viral Pneumonia** images. In their current release, there are **219 COVID-19 positive images**, **1341 normal images** and **1345 viral pneumonia images**. 
 
 #### Method
+For the training processes we have used Keras over Tensorflow an Python. All the architectures have been created, trained and tested from scratch, which means that the weights of the network are initialized randomly and there is not previous information from other data that could help our models to improve their results. 
+
+**First Architecture - Baseline Architecture**
+We propose the following baseline CNN:
+
+![Baseline Architecture.](https://github.com/polazaro/Covid-19-Detection/blob/master/images/baseline.bmp)
+
+
+
+
 
 
