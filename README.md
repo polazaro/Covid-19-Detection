@@ -42,6 +42,7 @@ First of all, some data augmentation has been done in order to balance the COVID
 
 ![Number of samples.](https://github.com/polazaro/Covid-19-Detection/blob/master/images/data_aug.bmp)
 
-
+We are obtaining a total of **739** new samples with the following data augmentation techniques
+* jdknaD
 
 
