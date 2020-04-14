@@ -16,7 +16,7 @@ In this research, we are going to use some **Convolutional Neural Networks (CNNs
 #### Database
 The database has been downloaded from a public [Kaggle](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database/data#). The images were collected from different sources and they are truthful images.
 
-![Examples from the database.](https://github.com/polazaro/Covid-19-Detection/images/database.bmp)
+![Examples from the database.](https://github.com/polazaro/Covid-19-Detection/blob/master/images/database.bmp)
 
 This database contains chest X-ray images for **COVID-19 positive cases** along with **Healthy** and **Viral Pneumonia** images. In their current release, there are **219 COVID-19 positive images**, **1341 normal images** and **1345 viral pneumonia images**. 
 
