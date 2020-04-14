@@ -43,6 +43,21 @@ First of all, some data augmentation has been done in order to balance the COVID
 ![Number of samples.](https://github.com/polazaro/Covid-19-Detection/blob/master/images/data_aug.bmp)
 
 We are obtaining a total of **739** new samples with the following data augmentation techniques
-* jdknaD
+* Left-Right Flip
+* Rotation (-15º to 15º)
+Here are some examples of the data augmentation, where a) corresponds to a flipped one and b) is a rotation.
 
+![Examples of Data Augmentation.](https://github.com/polazaro/Covid-19-Detection/blob/master/images/data_aug_examples.bmp)
 
+The distributions for the **training process** are: **75%** of the samples for training, **15%** for validation and **15%** for test. It is important to note that the test set from Covid-19 is going to be composed of only 33 images, which is a very poor test set, but there are no more public X-Ray images from Covid-19 that we could use in these experiments.
+
+We have performed some experiments without data augmentation and some with data augmentation in order to compare the influence of these "artificial" samples. The results are collected in this table:
+
+![Results.](https://github.com/polazaro/Covid-19-Detection/blob/master/images/results.bmp)
+
+We obtain a surprisingly high test accuracy of **95,45%** without data augmentation. This means that the model is making 415 correct predictions over 435 samples. If we compare the performance of the baseline model for the three classes separately, we can see that the **Healthy and Pneumonia is much higher (98.50% and 95.04% respectively) than Covid-19 accuracy (78.78%)**, as we expected. Now, if we focus on the baseline model with data augmentation, the total test accuracy is improved in **0,23%** and the accuracy for the COVID-19 samples has increased until **84,84%**. The second architecture improves even more this result, with a COVID-19 test accuracy of **87,87%**, but decreases the accuracy for the Pneumonia cases in 1%.
+
+#### Conclusion
+With very simple architectures we are able to learn and distingish some features from penumonia, COVID-19 and healthy chest X-Ray images. This means that there are some patterns and differences between a normal Pneumonia and a COVID-19 Pneumonia. On the other hand, we have seen that data augmentation has helped us to improve Covid-19 accuracy. This tell us that there is not enough data and there is a need of collecting more data (real or not) in order to improve the results. 
+
+Another interesting approach would be to collect more information about patients, like their age, gender, pathologies, etc. This information could be included in the model using different techniques or a simple concatenation of features.
