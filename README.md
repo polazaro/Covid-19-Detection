@@ -1,7 +1,7 @@
 # COVID-19 Detection from chest X-Ray images using Convolutional Neural Networks
 
-#### Pablo Lázaro Herrasti (lazaroh.pablo@gmail.com)
-#### Rubén Barco Terrones  (rubate10@gmail.com)
+#### Pablo Lázaro Herrasti - lazaroh.pablo@gmail.com
+#### Rubén Barco Terrones - rubate10@gmail.com
 
 ## Abstract
 In 2020, humanity is facing one of the greatest challenges ever seen in the last years because of a virus (Covid-19). An unprecedented pandemic that has millions of people confined at home. In this research, the possibility of detecting this virus in people using chest X-Ray images is studied. (i) A public dataset containing images from Covid-19, viral pneumonia and healthy people is used with (ii) Convolutional Neural Network architecture to be able to differentiate between various medical situations. Finally, (iii) it is revealed graphically the regions on which the CNN focuses in order to determine the medical situations of the person.
